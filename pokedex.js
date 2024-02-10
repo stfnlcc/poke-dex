@@ -7,7 +7,7 @@ async function obtenerYMostrarPokemon() {
         const detallesPokemon = await Promise.all(datos.results.map(pokemon => fetch(pokemon.url).then(res => res.json())));
 
         const pokedexElement = document.getElementById('pokedex');
-
+ 
         detallesPokemon.forEach(pokemon => {
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('card');

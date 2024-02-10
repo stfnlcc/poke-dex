@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #e74c3c;
+    margin: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 45px;
+    background-color: rgba(65, 64, 64, 0.8);
+    border-radius: 60px;
+    box-shadow: 20px -20px 20px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1250px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    margin-top: -120px;
+    color: #e74c3c;
+}
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+    grid-template-areas:
+        "file1col1 file1col2 file1col3 file1col4 file1col5"
+        "file2col1 file2col2 file2col3 file2col4 file2col5"
+        "file3col1 file3col2 file3col3 file3col4 file3col5"
+        "file30col1 file30col2 file30col3 file30col4 file30col5";
+}
+
+.card {
+    list-style: none;
+    padding: 17px;
+    background-color: #00000014;
+    text-align: center;
+    max-width: 200px;
+}
+
+.card-image {
+    height: 100px;
+    max-width: 100%;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.card-subtitle {
+    font-weight: lighter;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+
+.card:hover {
+    animation: bounce 0.90s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+    80% {
+        transform: translateY(-0px);
+    }
+}
+
+ol {
+    padding-inline-start: 0px;
+}
+
+
+
+ 
+  .pokeball {
+    margin-bottom: 140px;
+    margin-top: -35px;
+    margin-left: 520px;
+    display: block;
+    width: 192px;
+    height: 192px;
+    background: radial-gradient(
+        white 16px,
+        black 17px 18px,
+        white 19px 24px,
+        black 25px 32px,
+        transparent 33px
+      ),
+      linear-gradient(to bottom, red 0 80px, black 81px 96px, white 97px 100%);
+    border-radius: 50%;
+    border: 8px solid black;
+    box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);
+    animation: fall 0.5s ease-in-out 1s,
+      shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1.5s 3,
+      catch 0.5s ease-out 5.25s forwards;
+  }
+  /* Animation */
+  @keyframes shake {
+    0% {
+      transform: translateX(0) rotate(0);
+    }
+    20% {
+      transform: translateX(-10px) rotate(-20deg);
+    }
+    30% {
+      transform: translateX(10px) rotate(20deg);
+    }
+    50% {
+      transform: translateX(-10px) rotate(-10deg);
+    }
+    60% {
+      transform: translateX(10px) rotate(10deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+    }
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(-200%);
+    }
+    60% {
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes catch {
+    to {
+      filter: saturate(0.8) brightness(0.8);
+    }
+  }
+  
